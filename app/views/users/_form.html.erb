@@ -1,0 +1,48 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group mb-3">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control form-control-lg", placeholder: 'Full Name' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :mail, style: "display: block" %>
+    <%= form.text_field :mail, class: "form-control form-control-lg", placeholder: 'Email ID' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :send_due_date_reminder %>
+    <%= form.check_box :send_due_date_reminder, class: "form-check-input" %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :time_zone, style: "display: block" %>
+    <%= time_zone_select("user", "time_zone", nil, prompt: "Please select Time Zone") %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :due_date_reminder_time, style: "display: block" %>
+    <%= form.time_select :due_date_reminder_time%>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :due_date_reminder_interval, style: "display: block" %>
+    <%= form.number_field :due_date_reminder_interval , class: "form-control form-control-lg", placeholder: 'Please input between 0 and 10'%>
+  </div>
+
+  <div class="form-group mt-3">
+    <%= form.submit class: "btn btn-primary" %>
+    <%= link_to "Back to users", users_path, class: "btn btn-outline-primary" %>
+  </div>
+<% end %>

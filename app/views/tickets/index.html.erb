@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<div class="col-lg-8 max-auto">
+  <h1>Tickets</h1>
+  <%= link_to "Create new Ticket", new_ticket_path, class: "btn btn-primary mb-3" %>
+  <div id="users">
+  <% @tickets.each do |ticket| %>
+      <div class="card shadow mb-3">
+        <div class="card-body">
+        <%= render ticket %>
+          <p>
+            <%= link_to "Show this ticket", ticket, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

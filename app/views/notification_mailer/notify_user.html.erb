@@ -1,0 +1,11 @@
+<h1>Notification for Ticket assignment</h1>
+
+<p>
+  Dear <%= @ticket.project_member_name.capitalize %>, you have been just assigned a ticket <%= @ticket.title %>.<br/><br/>
+
+  Below are the details of the ticket:<br/>
+  <%= @ticket.description %>
+</p>
+
+Best,<br/>
+MyProject Team
