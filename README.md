@@ -1,25 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 Ticket reminder application
+
+System dependencies:
+
+* Ruby version = v3.1.2
+
+* Rails version = v7.0.4
+
+* Node version = v18.9.0
+
+* Database creation = rails db:setup
+
+* Application set up: git clone git@github.com:nileshkumar/reminder-app.git
+
+* Set up Gems: bundle install
+
+* Run rails server: rails server
+
+* To run the model test suite: bin/rails test test/model
+
+* Services - 
+    * Sidekick for background jobs
+    * Redis 
+    
+
