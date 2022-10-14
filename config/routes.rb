@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :tickets
   resources :users
   
-  root "tickets#index"
+  root "users#index"
 end
