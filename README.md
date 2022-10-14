@@ -18,6 +18,8 @@ System dependencies:
 
 * Run rails server: rails server
 
+* Run application: http://localhost:3000
+
 * To run the model test suite: bin/rails test test/model
 
 * Services - 
